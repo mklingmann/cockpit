@@ -3050,7 +3050,7 @@ riot.tag2('field-location', '<div class="uk-alert" if="{!apiready}"> Loading map
             'https://cdn.jsdelivr.net/npm/places.js@1.7.2/dist/cdn/places.min.js'
         ]);
 
-        var $this = this, defaultpos = {lat:53.55909862554551, lng:9.998652343749995};
+        var $this = this, defaultpos = {lat:47.1, lng:8.3};
 
         this.latlng = defaultpos;
 
@@ -3081,7 +3081,7 @@ riot.tag2('field-location', '<div class="uk-alert" if="{!apiready}"> Loading map
 
                 setTimeout(function(){
 
-                    var map = L.map($this.refs.map).setView([$this.latlng.lat, $this.latlng.lng], opts.zoomlevel || 13);
+                    var map = L.map($this.refs.map).setView([$this.latlng.lat, $this.latlng.lng], opts.zoomlevel || 8);
 
                     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
                         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
