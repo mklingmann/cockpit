@@ -782,7 +782,7 @@ class SimpleImage {
     // workaround is to create a new truecolor image, allocate a transparent color, and copy the
     // image over to it using imagecopyresampled.
     $newImage = imagecreatetruecolor($width, $height);
-    $transparentColor = imagecolorallocatealpha($newImage, 0, 0, 0, 127);
+    $transparentColor = imagecolorallocatealpha($newImage, 255, 255, 255, 127);
     imagecolortransparent($newImage, $transparentColor);
     imagefill($newImage, 0, 0, $transparentColor);
     imagecopyresampled(
